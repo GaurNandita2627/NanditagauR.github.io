@@ -3,40 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nandita Gaur | Software Developer</title>
+<title>Nandita Gaur | Developer Portfolio</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
 body {
+    margin: 0;
+    font-family: 'Segoe UI', monospace;
     background: #0b1220;
     color: #e5e7eb;
-    scroll-behavior: smooth;
 }
 
 /* NAV */
 nav {
     position: sticky;
     top: 0;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.85);
     display: flex;
     justify-content: center;
     padding: 12px;
-    border-bottom: 1px solid #1f2937;
+    border-bottom: 1px solid #22c55e;
 }
 
 nav a {
-    color: #38bdf8;
-    margin: 0 18px;
+    color: #22c55e;
+    margin: 0 15px;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -46,85 +38,87 @@ nav a:hover {
 /* HERO */
 header {
     text-align: center;
-    padding: 90px 20px;
+    padding: 80px 20px;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #22c55e;
+    box-shadow: 0 0 20px #22c55e;
 }
 
 header h1 {
-    font-size: 48px;
-    color: #38bdf8;
-    animation: fadeIn 1.2s ease-in-out;
+    margin-top: 15px;
+    font-size: 40px;
+    color: #22c55e;
 }
 
 header p {
     color: #94a3b8;
-    margin-top: 10px;
-    font-size: 18px;
 }
 
 button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #38bdf8, #a78bfa);
-    color: white;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    border: 1px solid #22c55e;
+    color: #22c55e;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 20px;
 }
 
 button:hover {
-    transform: scale(1.05);
+    background: #22c55e;
+    color: black;
 }
 
 /* SECTIONS */
 section {
     max-width: 1000px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
 h2 {
-    color: #38bdf8;
+    color: #22c55e;
     margin-bottom: 20px;
 }
 
-/* CARDS */
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* CARD */
 .card {
     background: #111827;
-    padding: 20px;
-    margin: 15px 0;
-    border-left: 4px solid #38bdf8;
+    border: 1px solid #22c55e;
     border-radius: 12px;
+    padding: 15px;
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    border-left: 4px solid #f472b6;
+    border-color: #f472b6;
 }
 
-/* PROJECT LINKS */
-a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #f472b6;
+/* IMAGES */
+.card img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 25px;
-    border-top: 1px solid #1f2937;
+    padding: 20px;
+    border-top: 1px solid #22c55e;
     color: #94a3b8;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
 }
 </style>
 
@@ -133,15 +127,16 @@ footer {
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
 </nav>
 
 <header id="home">
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="coder">
     <h1>Nandita Gaur</h1>
-    <p>Software Developer | Python & C++ Enthusiast | BCA Student</p>
+    <p>Python Developer | C++ Enthusiast | BCA Student</p>
     <button onclick="window.location.href='mailto:gaurnandita27@gmail.com'">
         Contact Me
     </button>
@@ -150,44 +145,46 @@ footer {
 <section id="about">
     <h2>About Me</h2>
     <div class="card">
-        I am a passionate software development student focused on building real-world applications.
-        I enjoy solving problems using Python and C++, and I am continuously improving my skills in DSA,
-        web development, and system design fundamentals.
+        I am a passionate developer focused on Python, C++, DSA and web development.
+        I love building real-world projects and improving problem-solving skills.
     </div>
 </section>
 
 <section id="skills">
-    <h2>Technical Skills</h2>
+    <h2>Skills</h2>
     <div class="card">
-        C++, Python, SQL, Data Structures & Algorithms, OOP, Operating Systems, Computer Networks, Digital Electronics
+        C++ | Python | SQL | DSA | OS | CN | Digital Electronics
     </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
-        <h3>Python Quiz Application</h3>
-        <p>Interactive CLI-based quiz system with scoring logic.</p>
-        <a href="https://github.com/GaurNandita2627/python-quiz-application" target="_blank">View Project →</a>
-    </div>
+    <div class="grid">
 
-    <div class="card">
-        <h3>ISS Tracker</h3>
-        <p>Live satellite tracking using real-time API data.</p>
-        <a href="https://github.com/GaurNandita2627/ISS-Tracker" target="_blank">View Project →</a>
-    </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png">
+            <h3>Python Quiz App</h3>
+            <a href="https://github.com/GaurNandita2627/python-quiz-application" target="_blank">View Code</a>
+        </div>
 
-    <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>Modern responsive portfolio built using HTML & CSS.</p>
-        <a href="https://gaurnandita2627.github.io" target="_blank">Live Site →</a>
-    </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/4149/4149652.png">
+            <h3>ISS Tracker</h3>
+            <a href="https://github.com/GaurNandita2627/ISS-Tracker" target="_blank">View Code</a>
+        </div>
 
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
+            <h3>Portfolio Website</h3>
+            <a href="https://gaurnandita2627.github.io" target="_blank">Live Site</a>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-    © 2026 Nandita Gaur | Built with Passion & Code 💻
+    © 2026 Nandita Gaur | Built with Code + Creativity
 </footer>
 
 </body>
